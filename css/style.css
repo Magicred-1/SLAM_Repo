@@ -115,3 +115,29 @@ form p a {
 form p a:hover {
     color: var(--connectionButtonHoverBG);
 }
+
+
+footer{
+    background-color: #f2f2f2;
+}
+footer hr{
+    font-size: 0.1rem;
+    color: #e3e4e84d;
+}
+footer ul li img{
+    max-width: 5%;
+    transform: translateX(.3rem);
+}
+footer p{
+    color: #262728;
+    padding: 1rem 1rem;
+}
+footer ul{
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+footer ul li a{
+    padding-left: 1rem;
+    color:#262728d2;
+}
