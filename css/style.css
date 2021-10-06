@@ -1,0 +1,67 @@
+/* reset CSS */
+html{
+    font-size: 62.5%;
+}
+:root {
+    --primaryColor : rgb(219, 212, 212);
+    --secondaryColor : rgb(241, 239, 239);
+}
+body {
+    font: 1.6rem sans-serif;
+    margin: 0;
+    background: url("./asset/img/background.jpeg");
+}
+h1, h2, h3, h4, ol, ul, li ,p {
+    margin: 0;
+}
+header h1 {
+    background-color: var(--primaryColor);
+    padding: 1.6rem 0 1.6rem 0;
+    margin: 0 0 1.6rem;
+    border: solid 1px;Ò
+}
+
+header a {
+    padding: 0.1rem;
+    margin-bottom: 100px;
+}
+header img {
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid rgb(161, 161, 161) 1px;
+}
+header img:nth-of-type(2) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    border: none;
+    border-radius: 0;
+}
+header h1 {
+    text-align: center;
+}
+
+ul li {
+    list-style-type: none;
+}
+main section {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 5rem;
+    max-width: 100%;
+}
+li img {
+    width: 20%;
+    height: auto;
+}
+footer {
+    background-color: var(--primaryColor);
+    padding: 1.6rem;
+    border: solid 1px;
+}
+footer a {
+    float: right;
+    content: &#xf09a;;
+}
