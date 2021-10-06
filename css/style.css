@@ -1,18 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+/* reset css */
+html{
+    font-size: 70%;
+    scroll-behavior: smooth;
+    background-color: var(--connectionButtonTextColor);
+}
 body{
-  font-family: 'Arimo', sans-serif;
-  margin: 0;
-  padding: 0;
+    font: 1.6rem 'Arimo', sans-serif;
+    margin: 0;
+    padding: 0; 
 }
-
-:root {
-    --primaryColor : #f4f3ee;
-    --secondaryColor : #787878;
-    --linkColor : #595959;
-    --hoverLinkcolor : #000;
-    --micColor : #5c5c5c;
+h1,h2,h3,h4,h5,h6,p,figure,ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
-
+a{
+    color: #222;
+    text-decoration: none;
+}
+*{
+    box-sizing: border-box;
+}
+:root{
+    --connectionButtonBg : rgb(43, 119, 235);
+    --connectionButtonHoverBG : rgb(38, 102, 197);
+    --shadowSearchBar : rgba(184,184,184,1);
+    --navLink : #787878;
+    --navLinkHover : #000;
+    --borderSearchBar : #d1d1d1;
+    --connectionButtonTextColor : #fff;
+}
+ 
 header{
     display: flex;
     margin: 1rem 2rem;
@@ -21,67 +40,78 @@ header{
 }
 header nav a{
   margin-right: 1rem;
-  color: var(--secondaryColor);
-  text-decoration: none;
+  color: var(--navLink);
 }
-header nav ul li a:hover{
-  color: var(--hoverLinkcolor);
-  text-decoration: underline;
-  text-decoration-style: solid;
+header nav a:hover{
+  color: var(--navLinkHover);
 }
-header nav ul li a{
-  font-size: 3rem;
-  margin-top: 1rem;
-  color: var(--linkColor);
+header nav{
+  display: flex;
+  margin: 1rem 2rem;
+  flex-wrap: wrap;
+  align-items: center;
 }
-/* Fin de la partie header */
 
-/* Partie principale */
-section {
+section{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:center;
   margin-top: 10rem;
 }
-section .form-group{
-  display: flex;
+main section img{
+    padding: 3rem;
+}
+main section form{
+  display: block;
   flex-direction: column;
   width: 40%;
 }
-section .form-group input{
-  margin-top: 2rem;
-  padding: 1.5rem;
-  border-radius: 5.0rem;
-  border: solid #d1d1d1;
-  outline:none;
-  width: 100%;
+main section form input{
+    margin-top: -2rem;
+    padding:1.5rem;
+    border-radius: 5rem;
+    border: 0.1rem solid var(--borderSearchBar);
+    width: 100%;
+    align-items: center;
 }
-section .form-group input:hover, .main .form-group input:focus{
-  -webk-webkit-box-shadow: -8px -1px 19px -8px rgba(184,184,184,1);
-  -moz-box-shadow: -8px -1px 19px -8px rgba(184,184,184,1);
-  box-shadow: -8px -1px 19px -8px rgba(184,184,184,1);
-  border:none;
+header nav a:nth-child(3):hover {
+    background: var(#4d4d4d);
+    padding: 1rem;
+    text-align: center;
 }
-section .form-group label i{
-    float: right;
-    font-size: 2rem;
-    margin-top: -2.6rem;
-    margin-right: -1.5rem;
-    position: relative;
-    cursor: pointer;
-    color: #5c5c5c;
+header nav a:nth-child(4) {
+    background-color: var(--connectionButtonBg);
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 13rem;
+    top: 4rem;
+    text-align: center;
 }
-section .buttons button{
-  padding: 1rem 2rem;
-  background-color: #f0f0f0;
-  border:none; 
+header nav a:nth-child(4):hover {
+    background-color: var(--connectionButtonHoverBG);
+}
+section input:hover, section input:focus{
+    -webk-webkit-box-shadow: -8px -1px 19px -8px var(--shadowSearchBar);
+    -moz-box-shadow: -8px -1px 19px -8px var(--shadowSearchBar);
+    box-shadow: -8px -1px 19px -8px var(--shadowSearchBar);
+    border: 0;
+}
+form button:nth-of-type(submit) {
     margin-top: 4rem;
-  border-radius: 0.5rem;
-  margin-right: 1;
-  cursor:pointer;
-  color: #4d4d4d;
-  outline:none;
+    text-align: center;
 }
-footer {
-    display: block;
+form button{
+    padding: 1rem 2rem;
+    background-color: #f0f0f0;
+    border: 0; 
+    border-radius: 0.5rem;
+    margin: 4rem 10%;
+    color: #4d4d4d;
+}
+form p a {
+    color: var(--connectionButtonBg);
+}
+form p a:hover {
+    color: var(--connectionButtonHoverBG);
 }
